@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-BG);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    color: var(--white);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ## Colors */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.container {
+
+    width: 21rem;
+    border-radius: 0.8rem;
+    background-color: var(--very-dark-blue-card-BG);
+    color: azure;
+    padding: 1.5rem;
+    color: var(--soft-blue);
+    box-shadow: 0px 0px 13px 20px hsl(217, 54%, 11%);
+
+}
+
+.container .card-img {
+    aspect-ratio: 1 / 1;
+    background-color: aliceblue;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-image: url('images/image-equilibrium.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.container .card-img:hover .img-hover {
+    transform: translateY(0);
+    visibility: visible;
+  
+}
+
+.container .card-img .img-hover {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: hsl(178deg 100% 50% / 52%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    transform: translateY(-18rem);
+    visibility: hidden;
+
+}
+
+.container .card-main {
+    border-bottom: 1px solid var(--very-dark-blue-line);
+    padding: 1.5rem 0;
+}
+
+.container .card-main h1 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+}
+
+.container .card-main h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+
+}
+
+.container .card-main p {
+    margin-bottom: 1.5rem;
+}
+
+.container .card-main {
+    border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.container .card-main .span-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container .card-main .span-flex .ethereum {
+    color: var(--cyan);
+}
+
+.container .card-main .span-flex span {
+    display: flex;
+    align-items: center;
+
+}
+
+.container .card-main .span-flex span svg {
+    margin-right: 0.3rem;
+
+}
+
+.container .card-footer {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.container .card-footer .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0.120rem solid var(--white);
+}
+
+.container .card-footer .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card-footer p {
+    margin-left: 0.9rem;
+}
+
+.container .card-footer p span {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.container .card-footer p span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
